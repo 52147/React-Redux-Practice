@@ -1,30 +1,23 @@
-
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchData } from '../../redux/actions/dataActions';
+import React, {useEffect} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {fetchData} from "../../redux/actions/dataActions"
 
 export const Contact = () => {
-    const dispatch = useDispatch();
-    const message = useSelector((state) => state.data.message);
-  
-    useEffect(() => {
-      dispatch(fetchData());
-    }, [dispatch]);
-  
-    let displayMessage = '';
-    if (typeof message === 'object' && message !== null) {
-      displayMessage = JSON.stringify(message);
-    } else {
-      displayMessage = message;
-    }
-  
-    return (
-      <div>
-        <h1>React-Redux Frontend</h1>
-        <p>Message from the backend: {displayMessage}</p>
-      </div>
-    );
-  };
-  
-
-
+  const dispatch = useDispatch();
+  const message = useSelector((state) => state.data.message);
+  useEffect(() => {
+    dispatch(fetchData());
+  },[dispatch])
+  let display = "";
+  if(typeof message === "object" && message !== null){
+    display = JSON.stringify(message);
+  }else{
+    display = message;
+  }
+  return (
+    <div>
+      <h1>From React Redux Server</h1>
+      <p>Message from the backend: {display}</p>
+    </div>
+  )
+}

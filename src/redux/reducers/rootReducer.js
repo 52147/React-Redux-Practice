@@ -1,5 +1,5 @@
-import { combineReducers } from 'redux';
-import dataSlice from './dataSlice';
+import { combineReducers } from "redux";
+import dataSlice from "./dataSlice";
 
 const rootReducer = combineReducers({
   data: dataSlice,

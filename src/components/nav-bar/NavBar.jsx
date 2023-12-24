@@ -29,6 +29,12 @@ export const NavBar = () => {
             <li className= "nav-item">
               <Link to = "/contact" className = "nav-link">Contact</Link>
             </li>
+            <li className= "nav-item">
+              <Link to = "/counter" className = "nav-link">Counter Functional</Link>
+            </li>
+            <li className= "nav-item">
+              <Link to = "/counter_class" className = "nav-link">Counter Class</Link>
+            </li>
           </ul>
         </nav>
       </header>
